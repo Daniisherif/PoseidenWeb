@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body.home {
+    background-color: #f4f4f4; /* لون خلفية الصفحة */
+}
+
+header {
+    background-color:#3F3E29;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    direction: rtl;
+}
+
+.logo {
+    text-decoration: none;
+    color: rgb(200, 212, 202);
+    font-size: 35px;
+    font-weight: bold;
+    position:absolute;
+    top: 10px;
+    left: 20px;
+    
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    margin-left: 80px;
+}
+
+.navigation a:hover {
+    color: #FFD700;
+}
+
+section {
+    padding: 150px 150px;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(imagesss/imge.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+    
+.home h2 {
+    color: rgb(2, 2, 2);
+    font-size: 1.4cm;
+    font-weight: 500;
+}
+
+.home h3 {
+    color: rgb(32, 214, 214);
+    font-size: 0.5cm;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.main-btn {
+    background-color: #9fad77;
+    color: white;
+    display: inline-block;
+    letter-spacing: 1px;
+    padding: 0.9375em 2.1875;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    transition: 0.7s ease;
+}
+
+.main-btn:hover {
+    background-color: #FFD700;
+    color: #7cbd6f;
+    transform: scale(1.1);
+
+}
+
+.services {
+    background-color: #f8f8f7; /* لون خلفية قسم الـ Services */
+    padding: 50px 20px;
+}
+
+.title.services{
+    text-align: center;
+    color: #c1d687;
+    font-size: 1.2cm;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* المسافة بين الـ Cards */
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #dbddd7;
+    width: 300px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1); /* تكبير الـ Card عند الضغط */
+    background-color: #27125f; /* تغيير لون الخلفية */
+}
+
+.card:hover .icon,
+.card:hover .info h3,
+.card:hover .info p {
+    color: white; /* تغيير لون النصوص و اليقونات  */
+}
+
+.icon {
+    font-size: 2cm;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.icon {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.info h3 {
+    color: #27125f;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.info p {
+    color: #666;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.cards{
+  font-size: 1cm;
+  background-color: #666;
+  font-style: italic;
+} 
+
+footer h1{
+    background-color: black;
+    color: #ffffff;
+    font-style: italic;
+    text-align: left;
+    font-size: 0.4cm;
+    
+  }
+  
+  footer h2{
+    background-color: black;
+    color: #ffffff;
+    font-style: italic;
+    text-align: left;
+    font-size: 0.4cm;
+    padding-left: 55px;
+  }
+  
+  footer h3{
+    background-color: black;
+    color: #ffffff;
+    font-style: italic;
+    text-align: left;
+    font-size: 0.4cm;
+    padding-left: 58px;
+  }
+
+
+  /*صفحة المخيمات*/ 
+/* تنسيق عام للصفحة */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    direction: rtl; /* دعم اللغة العربية */
+    text-align: center;
+}
+.container{
+    background-color: #99c27f;
+}
+
+/* تنسيق العنوان الرئيسي */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* تنسيق الحاوية التي تحتوي على البطاقات */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* يجعل البطاقات تنزل لأسفل عند امتلاء الصف */
+    justify-content: center; /* توسيط العناصر */
+    gap: 20px; /* المسافة بين البطاقات */
+    max-width: 1200px; /* تحديد عرض الحاوية */
+    margin: 0 auto; /* توسيط الحاوية */
+}
+
+/* تنسيق كل بطاقة */
+.box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(50% - 20px); /* يجعل كل بطاقة تأخذ نصف العرض مع حساب المسافة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* تأثير عند تحريك المؤشر فوق البطاقة */
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* تنسيق العنوان داخل البطاقة */
+.text-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* تنسيق النص داخل البطاقة */
+.text-body {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* تنسيق الرقم والموقع */
+.Number, .location {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* تنسيق الرابط */
+.location a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.location a:hover {
+    text-decoration: underline;
+}
+
+/* تنسيق استجابة التصميم على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .box {
+        width: 100%; /* جعل البطاقات تأخذ العرض الكامل عند تصغير الشاشة */
+    }
+} 
+
+ /*صفحة المنهجيه*/
+
+ .المنهجيه {
+    width: 100%; /* اجعل العرض كاملًا */
+    max-width: 1200px; /* حد أقصى مناسب */
+    margin: auto; /* توسيط */
+    display: flex;
+    flex-wrap: wrap; /* السماح بالانتقال للسطر التالي */
+    gap: 20px; /* مسافة بين البطاقات */
+    justify-content: space-around; /* توزيع متساوٍ للبقاء بجانب بعضهم */
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .card-des{
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card__img {
+    height: 175px;
+    background: linear-gradient(315deg, #ff7d7d, #a62a00);
+    position: relative;
+  }
+  
+  .card-int {
+    padding: 15px;
+  }
+  
+  .card-int__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-int__button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ff7d7d;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .card-int__button:hover {
+    background-color: #a62a00;
+  }
+  
+  @media (max-width: 768px) {
+    .المنهجيه {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+
+
+ /*صفحة المكتبة*/
+/* جعل البطاقات جنبًا إلى جنب */
+  .card-space{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* تصميم البطاقة */
+.card.library {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  background: white;
+  padding: 0.4em;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* صورة الكتاب */
+.card-image {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 150px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('image\ book.webp');
+  transition: transform 0.3s ease;
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+/* محتوى البطاقة */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  margin-bottom: 10px;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+/* تغيير لون النص عند الضغط */
+.heading:active {
+  color: rgb(255, 94, 94);
+}
+
+
+/* تصميم استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
