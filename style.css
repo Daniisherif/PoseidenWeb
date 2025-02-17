@@ -293,7 +293,7 @@ h1 {
     display: flex;
     flex-wrap: wrap; /* السماح بالانتقال للسطر التالي */
     gap: 20px; /* مسافة بين البطاقات */
-    justify-content: space-around; /* توزيع متساوٍ للبقاء بجانب بعضهم */
+    justify-content: space-evenly; /* توزيع متساوٍ للبقاء بجانب بعضهم */
     align-items: flex-start;
     padding: 20px;
   }
@@ -429,4 +429,5 @@ h1 {
     align-items: center;
   }
 }
+
 
