@@ -8,9 +8,6 @@
     scroll-behavior: smooth;
 }
 
-body.home {
-    background-color: #f4f4f4; /* لون خلفية الصفحة */
-}
 
 header {
     background-color:#3F3E29;
@@ -44,32 +41,32 @@ header {
 }
 
 .navigation a:hover {
-    color: #FFD700;
+    color: #8b8149;
 }
 
 section {
     padding: 150px 150px;
 }
 
-.home {
+.main {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(imagesss/imge.jpg);
+    background-image: url(WhatsApp\ Image\ bag.jpeg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
     
-.home h2 {
+.main h1 {
     color: rgb(2, 2, 2);
-    font-size: 1.4cm;
+    font-size: 3rem;
     font-weight: 500;
 }
 
-.home h3 {
-    color: rgb(32, 214, 214);
+.main h2 {
+    color: rgb(13, 14, 14);
     font-size: 0.5cm;
     font-weight: 700;
     letter-spacing: 1px;
@@ -100,7 +97,7 @@ section {
 }
 
 .services {
-    background-color: #f8f8f7; /* لون خلفية قسم الـ Services */
+    background-color: transparent; /* لون خلفية قسم الـ Services */
     padding: 50px 20px;
 }
 
@@ -120,7 +117,7 @@ section {
 }
 
 .card {
-    background-color: #dbddd7;
+    background-color: white;
     width: 300px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -132,21 +129,23 @@ section {
 
 .card:hover {
     transform: scale(1.1); /* تكبير الـ Card عند الضغط */
-    background-color: #27125f; /* تغيير لون الخلفية */
+    background-color: #125f4c; /* تغيير لون الخلفية */
 }
 
 .card:hover .icon,
 .card:hover .info h3,
-.card:hover .info p {
+.card:hover .info p{
     color: white; /* تغيير لون النصوص و اليقونات  */
 }
 
 .icon {
-    font-size: 2cm;
+   font-size: 2.1cm;
     text-align: center;
-    transition: color 0.3s ease;
+    transition: color 0.3s  ease; 
 }
-
+.fa-solid {
+  font-size: 2cm;
+}
 .icon {
     text-align: center;
     margin-top: 15px;
@@ -154,7 +153,7 @@ section {
 
 .info h3 {
     color: #27125f;
-    font-size: 1.2em;
+    font-size: 1.5em;
     transition: color 0.3s ease;
 }
 
@@ -164,41 +163,18 @@ section {
     transition: color 0.3s ease;
 }
 
-.cards{
+.more{
   font-size: 1cm;
-  background-color: #666;
+  background-color: #fafafa;
   font-style: italic;
+  width: 100%;
+
 } 
 
-footer h1{
-    background-color: black;
-    color: #ffffff;
-    font-style: italic;
-    text-align: left;
-    font-size: 0.4cm;
-    
-  }
-  
-  footer h2{
-    background-color: black;
-    color: #ffffff;
-    font-style: italic;
-    text-align: left;
-    font-size: 0.4cm;
-    padding-left: 55px;
-  }
-  
-  footer h3{
-    background-color: black;
-    color: #ffffff;
-    font-style: italic;
-    text-align: left;
-    font-size: 0.4cm;
-    padding-left: 58px;
-  }
 
 
-  /*صفحة المخيمات*/ 
+
+  */صفحة المخيمات/* 
 /* تنسيق عام للصفحة */
 
 body {
@@ -209,9 +185,16 @@ body {
     direction: rtl; /* دعم اللغة العربية */
     text-align: center;
 }
-.container{
-    background-color: #99c27f;
+.camps{
+  background-color: #3F3E29;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(image\ book.webp);
 }
+
 
 /* تنسيق العنوان الرئيسي */
 h1 {
@@ -269,7 +252,7 @@ h1 {
 
 /* تنسيق الرابط */
 .location a {
-    color: #007BFF;
+    color: #364c63;
     text-decoration: none;
 }
 
@@ -284,7 +267,7 @@ h1 {
     }
 } 
 
- /*صفحة المنهجيه*/
+*/صفحة المنهجيه*/
 
  .المنهجيه {
     width: 100%; /* اجعل العرض كاملًا */
@@ -292,10 +275,11 @@ h1 {
     margin: auto; /* توسيط */
     display: flex;
     flex-wrap: wrap; /* السماح بالانتقال للسطر التالي */
-    gap: 20px; /* مسافة بين البطاقات */
-    justify-content: space-evenly; /* توزيع متساوٍ للبقاء بجانب بعضهم */
+    gap: 30px; /* مسافة بين البطاقات */
+    justify-content: space-around; /* توزيع متساوٍ للبقاء بجانب بعضهم */
     align-items: flex-start;
     padding: 20px;
+    background: url();
   }
   
   .card-des{
@@ -314,7 +298,7 @@ h1 {
   
   .card__img {
     height: 175px;
-    background: linear-gradient(315deg, #ff7d7d, #a62a00);
+    background: linear-gradient(315deg, #658372, #a62a00);
     position: relative;
   }
   
@@ -351,7 +335,7 @@ h1 {
   
 
 
- /*صفحة المكتبة*/
+ */صفحة المكتبة/
 /* جعل البطاقات جنبًا إلى جنب */
   .card-space{
   display: flex;
@@ -428,6 +412,38 @@ h1 {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.footer p{
+  background-color: black;
+  color: #ffffff;
+  font-style: italic;
+  text-align: left;
+  font-size: 0.4cm;
+  
+}
+
+.footer h5{
+  background-color: black;
+  color: #ffffff;
+  font-style: italic;
+  text-align: left;
+  font-size: 0.4cm;
+  padding-left: 55px;
+}
+
+.footer h6{
+  background-color: black;
+  color: #ffffff;
+  font-style: italic;
+  text-align: left;
+  font-size: 0.4cm;
+  padding-left: 58px;
+}
+
+
+.contact{
+  background-color: #364c63;
 }
 
 
