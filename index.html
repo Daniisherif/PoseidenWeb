@@ -8,29 +8,35 @@
     <link rel="stylesheet" href="style.css">
     <title>Scoutly.Ai</title>
 </head>
-<body class="home">
+<body class="all">
 
     <header>
-       <a href="#" class="logo">Scoutly.Ai</a>
+       <a href="" class="logo">Scoutly.Ai</a>
        <nav class="navigation"> 
         <nav class="navigation">
             <a href="#" onclick="showSection('home')">الرئيسية</a>
             <a href="#" onclick="showSection('camps')">المخيمات</a>
-            <a href="#" onclick="showSection('المنهجيه')">المنهجيه</a>
+            <a href="#" onclick="showSection('المنهجية')">المنهجية</a>
             <a href="#" onclick="showSection('library')">المكتبة</a>
             <a href="#" onclick="showSection('contact')">التواصل</a>
        </nav>
     </header>
 
     <section id="home">
+      <div name="main">
         <div>
-            <h2>Scoutly.AI</h2>
-            <h3>We can help you in everything in scout</h3>
+            <h1>Scoutly.AI</h1>
+            <h2>We can help you in everything in scout</h2>
             <a href="#services" class="main-btn">View Services</a>
         </div>
+      </div>
+        
     
+
     <div class="services" id="services">
         <h2 class="title services">Services</h2>
+
+
         <div class="content">
             <div class="card">
                 <div class="icon">
@@ -38,45 +44,41 @@
                 </div>
                 <div class="info">
                     <h3>Camps</h3>
-                    <p>We can help you</p>
+                    <p>"يمكننا مساعدتك في العثور على أرض صالحة للتخييم في كل المحافظات."</p>
                 </div>
             </div>
+
             <div class="card">
                 <div class="icon">
                     <i class="fa-solid fa-book"></i>
                 </div>
                 <div class="info">
                     <h3>Library</h3>
-                    <p>Explore our resources</p>
+                    <p>يمكنك ايجاد جميع الكتب الخصة بالكشافة"</p>
                 </div>
+
             </div>
             <div class="card">
                 <div class="icon">
                     <i class="fa-solid fa-print"></i>
                 </div>
                 <div class="info">
-                    <h3>Community</h3>
-                    <p>Join our network</p>
+                    <h3>Methodology</h3>
+                    <p>سوف تجد منهجية جميع الوحدات "coming soon"</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-    <div class="cards to know more">
+    <div class="more">
         <div>
             <h2>we are raht Possiden</h2>
             <h3>We can help you in everything in scout</h3>
             <h4>we are from x group from wadi el neil scouts</h4>
         </div>
     </div>
-    
-    <footer class="footer">
-        <h1>Scouts and Guides Wadi El Nile</h1>
-        <h2>10th Group</h2>
-        <h3>Poseidon</h3>
-    </footer>
-    </section>
+  </section>
+
 
       <!-- صفحة المخيمات -->
       <section id="camps" style="display: none;">
@@ -156,17 +158,16 @@
         </div>
     </section>
       <!-- صفحة منهجيه -->
-    <section id="المنهجيه" style="display: none;" >
-      <h2>المنهجية</h2>
-      <div class="card-space">
-    
-      <div class="card__img">
+    <section id="المنهجية" style="display: none;" >
+    <div class="card-des">
+    <div class="card__corner"></div>
+    <div class="card__img">
       <span class="card__span">Category</span>
     </div>
     <div class="card-int">
-      <p class="card-int__title">This is the article title</p>
-      <p class="excerpt">Lorem ipsum dolor sit amet...</p>
-      <a href="your-link.html" class="card-int__button">Show</a>
+      <p class="card-int__title">منهجية اشبال و زهرات </p>
+      <p class="excerpt">coming soon</p>
+      <a href="your-link.html" class="card-int__button">open</a>
     </div>
   </div>
 
@@ -176,9 +177,9 @@
       <span class="card__span">Category</span>
     </div>
     <div class="card-int">
-      <p class="card-int__title">This is the article title</p>
-      <p class="excerpt">Lorem ipsum dolor sit amet...</p>
-      <a href="your-link.html" class="card-int__button">Show</a>
+      <p class="card-int__title">منهجية كشافة و مرشدات </p>
+      <p class="excerpt">coming soon...</p>
+      <a href="your-link.html" class="card-int__button">Open</a>
     </div>
   </div>
 
@@ -188,9 +189,9 @@
       <span class="card__span">Category</span>
     </div>
     <div class="card-int">
-      <p class="card-int__title">This is the article title</p>
-      <p class="excerpt">Lorem ipsum dolor sit amet...</p>
-      <a href="your-link.html" class="card-int__button">Show</a>
+      <p class="card-int__title">منهجية جوالة و جوالات</p>
+      <p class="excerpt">coming soon...</p>
+      <a href="your-link.html" class="card-int__button">Open</a>
     </div>
   </div>
 </section>
@@ -365,17 +366,23 @@
         <!-- صفحة التواصل -->
         <section id="contact" style="display: none;">
             <h2>التواصل</h2>
-            <p>تواصل معنا لمزيد من المعلومات.</p>
-        </section>
-    
-        <script>
-            function showSection(sectionId) {
-                document.querySelectorAll('section').forEach(section => {
-                    section.style.display = 'none';
-                });
-                document.getElementById(sectionId).style.display = 'block';
-            }
-        </script>
 
+        </section>
+        
+
+        <script>
+          function showSection(sectionId) {
+              document.querySelectorAll('section').forEach(section => {
+                  section.style.display = 'none';
+              });
+              document.getElementById(sectionId).style.display = 'block';
+          }
+      </script>
+    
+        <footer class="footer">
+          <p>Scouts and Guides Wadi El Nile</p>
+          <h5>10th Group</h5>
+          <h6>Poseidon</h6>
+        </footer>
 </body>
 </html>
