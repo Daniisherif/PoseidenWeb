@@ -59,14 +59,14 @@ section {
 }
 
 .home { 
-  background-image: url(WhatsApp\ Image\ bag.jpeg);
+  background-image: url(image\ book.webp);
 }
 .main {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(WhatsApp\ Image\ bag.jpeg);
+    background-image: url(image\ book.webp);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
