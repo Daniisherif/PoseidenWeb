@@ -40,14 +40,15 @@ header {
   justify-content: center;
   align-items: center;
   gap: 45px;
-  font-size: 0.4cm;
+  font-size: 0.5cm;
  
 }
 
 .navigation a {
     color: white;
     text-decoration: none;
-    margin-left: 60px;
+    margin-left: 80px;
+    size: 0.5cm;
 }
 
 .navigation a:hover {
@@ -59,14 +60,14 @@ section {
 }
 
 .home { 
-  background-image: url(image\ book.webp);
+  background-image: url(WhatsApp\ Image\ bag.jpeg);
 }
 .main {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(image\ book.webp);
+    background-image: url(WhatsApp\ Image\ bag.jpeg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -451,11 +452,123 @@ h1 {
   font-size: 0.4cm;
   padding-left: 58px;
 }
+/* contact */
 
-
-.contact{
-  background-color: #364c63;
+.contact {
+  width: 100%;
+  height: 100%;
 }
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+
+}
+
+input[type=submit] {
+  background-color: #80ccb0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}
+
+
+ .parent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .child {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .child:hover {
+    background-color: white;
+    background-position: -100px 100px, -100px 100px;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+    transform: perspective(180px) rotateX(60deg) translateY(2px);
+    box-shadow: 0px 10px 10px rgb(1, 49, 182);
+  }
+  
+  button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+  }
+  
+  .button:hover {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
+    border-radius: 50%;
+  }
+  
+
+
+
+
+
 
 @media (max-width: 768px) {
     header {
