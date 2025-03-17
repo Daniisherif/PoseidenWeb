@@ -44,7 +44,7 @@ header {
  
 }
 
-.navigation a {
+.navigation a h1 {
     color: white;
     text-decoration: none;
     margin-left: 80px;
@@ -589,7 +589,7 @@ input[type=submit]:hover {
 
     }
 
-    .navigation a {
+    .navigation a h1 {
         margin-left: 0;
       
     }
