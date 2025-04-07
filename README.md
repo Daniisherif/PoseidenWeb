@@ -5,9 +5,5 @@ WadiElNile Scout Group Website!!
 ## SubHeading
 
 Welcome to our website
-We are a group of young people who love the outdoors and want to share our adventures with you.
-
-## Local Development
-
-### Local Development Environment
-   
+This is Raht Poseidon's Morashaheen project. 
+Our goal is to facilitate access to Scouting materials through our simple website. 
