@@ -9,85 +9,110 @@
 }
 
 
+
+
+/* تنسيق الهيدر */
 header {
-    background-color:#3F3E29;
-    width: 100%;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 50px;
-    direction: rtl;
-}
-
-.logo {
-    text-decoration: none;
-    color: rgb(200, 212, 202);
-    font-size: 35px;
-    font-weight: bold;
-    position:absolute;
-    top: 10px;
-    left: 20px;
-    
-}
-
-.navigation {
+  background-color: #3F3E29;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 45px;
-  font-size: 0.5cm;
- 
+  padding: 15px 50px;
 }
 
-.navigation a h1 {
-    color: white;
-    text-decoration: none;
-    margin-left: 80px;
-    size: 0.5cm;
+/* تنسيق الشعار */
+.logo {
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* تنسيق القائمة */
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  display: inline;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white; /* لون النص أبيض */
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .navigation a:hover {
-    color: #8b8149;
+  color: #d4af37; /* لون عند التحويم */
 }
 
+/* تنسيق الأقسام */
 section {
-    padding: 150px 150px;
+  padding: 150px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.home { 
-  background-image: url(WhatsApp\ Image\ bag.jpeg);
-}
+/* القسم الرئيسي */
 .main {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background-image: url(WhatsApp\ Image\ bag.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  width: 90%; /* تكبير عرض الصفحة */
+  max-width: 1200px; /* تحديد الحد الأقصى للعرض */
+  margin: 40px auto; /* توسيط الصفحة وإضافة مسافة عمودية */
+  padding: 30px; /* إضافة مسافة داخلية */
+  background-color: #f9f9f9; /* لون خلفية فاتح */
+  border-radius: 10px; /* زوايا مستديرة */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+  line-height: 2; /* زيادة المسافة بين الجمل */
+  font-size: 1.2rem; /* تكبير حجم النص */
+  color: #333; /* لون النص */
 }
-    
+
+
 .main h1 {
-    color: rgb(2, 2, 2);
-    font-size: 3rem;
-    font-weight: 500;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .main h2 {
-    color: rgb(13, 14, 14);
-    font-size: 0.5cm;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
 }
+
+.main h3{
+  color: rgb(13, 14, 14);
+  font-size: 0.7cm;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* إخفاء الأقسام عند بدء التحميل */
+.home{
+  display: flex;
+}
+
+
+
 
 .main-btn {
     background-color: #9fad77;
@@ -101,10 +126,11 @@ section {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     transition: 0.7s ease;
+    margin-top: 20px;
 }
 
 .main-btn:hover {
-    background-color: #FFD700;
+    background-color: #55e68c;
     color: #7cbd6f;
     transform: scale(1.1);
 
@@ -141,10 +167,35 @@ section {
     cursor: pointer;
 }
 
-.card:hover {
-    transform: scale(1.1); /* تكبير الـ Card عند الضغط */
-    background-color: #125f4c; /* تغيير لون الخلفية */
+.card h3, .card p {
+  text-decoration: none;
 }
+
+/* تأثير عند الضغط على الكارت */
+.card {
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* تكبير الكارت عند التمرير */
+  background-color: #f0f0f0; /* تغيير لون الخلفية */
+}
+
+/* تكبير الكارت وتغيير لونه عند الضغط من الموبايل */
+@media (max-width: 768px) {
+  .card:active {
+      transform: scale(1.1); /* تكبير الكارت أكثر عند الضغط */
+      background-color: #d1e7dd; /* لون خلفية مختلف */
+  }
+}
+.card:hover
+.card:active {
+    transform: scale(1.1); /* تكبير الـ Card عند الضغط */
+    color: #125f4c; /* تغيير لون الخلفية */
+}
+
+
 
 .card:hover .icon,
 .card:hover .info h3,
@@ -169,6 +220,7 @@ section {
     color: #27125f;
     font-size: 1.5em;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .info p {
@@ -177,13 +229,23 @@ section {
     transition: color 0.3s ease;
 }
 
-.more{
-  font-size: 1cm;
-  background-color: #fafafa;
-  font-style: italic;
-  width: 100%;
+.more {
+  font-size: 1.2rem; /* Adjust the font size for better readability */
+  font-weight: bold; /* Make the text bold */
+  color: #ffffff; /* Set a user-friendly color */
+  background-color: #cdd1d4; /* Add a background color for better visibility */
+  padding: 10px 20px; /* Add padding for a clickable button-like appearance */
+  border-radius: 5px; /* Round the corners for a modern look */
+  text-decoration: none; /* Remove underline from links */
+  display: inline-block; /* Ensure proper spacing */
+  transition: background-color 0.3s ease; /* Add a hover effect */
+}
 
-} 
+.more:hover {
+  background-color: #0056b3; /* Darken the background on hover */
+  color: #e0e0e0; /* Slightly change the text color on hover */
+  cursor: pointer; /* Change the cursor to indicate interactivity */
+}
 
 
   /*صفحة المخيمات*/ 
@@ -197,17 +259,46 @@ body {
     direction: rtl; /* دعم اللغة العربية */
     text-align: center;
 }
-.camps{
-  background-color: #3F3E29;
-  background-size: cover;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: url;
+/* إضافة مسافة بين الكروت في قسم المخيمات */
+/* تنسيق الحاوية التي تحتوي على الكروت */
+.camps-container {
+  display: flex;
+  flex-wrap: wrap; /* السماح للكروت بالانتقال إلى الصف التالي إذا لم تكن المساحة كافية */
+  gap: 20px; /* إضافة مسافة بين الكروت */
+  justify-content: center; /* توسيط الكروت داخل الحاوية */
+  padding: 20px; /* إضافة مسافة داخلية للحاوية */
 }
 
+/* تنسيق الكروت */
+.camp-card {
+  background-color: #ffffff; /* لون خلفية الكارت */
+  border: 1px solid #ddd; /* إطار خفيف */
+  border-radius: 10px; /* زوايا مستديرة */
+  padding: 20px; /* مسافة داخلية */
+  width: calc(33.33% - 20px); /* عرض الكارت مع مراعاة المسافات */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  text-align: center; /* توسيط النص */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* تأثير عند التفاعل */
+}
 
+/* تأثير عند التمرير فوق الكارت */
+.camp-card:hover {
+  transform: scale(1.05); /* تكبير الكارت قليلاً */
+  background-color: #f0f0f0; /* تغيير لون الخلفية */
+}
+
+/* تنسيق النصوص داخل الكروت */
+.camp-card h3 {
+  font-size: 1.5rem; /* حجم العنوان */
+  color: #333; /* لون النص */
+  margin-bottom: 10px; /* مسافة أسفل العنوان */
+}
+
+.camp-card p {
+  font-size: 1rem; /* حجم النص */
+  color: #666; /* لون النص */
+  line-height: 1.5; /* تحسين المسافة بين الأسطر */
+}
 /* تنسيق العنوان الرئيسي */
 h1 {
     color: #333;
@@ -222,17 +313,19 @@ h1 {
     gap: 20px; /* المسافة بين البطاقات */
     max-width: 1200px; /* تحديد عرض الحاوية */
     margin: 0 auto; /* توسيط الحاوية */
+    align-items: center;
 }
 
 /* تنسيق كل بطاقة */
 .box {
-    background-color: #fff;
+    background-color: #8b8149;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
-    width: calc(50% - 20px); /* يجعل كل بطاقة تأخذ نصف العرض مع حساب المسافة */
+    width: calc(50% - 40px); /* يجعل كل بطاقة تأخذ نصف العرض مع حساب المسافة */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل */
     transition: transform 0.3s ease-in-out;
+    text-align: center;
 }
 
 /* تأثير عند تحريك المؤشر فوق البطاقة */
@@ -282,26 +375,33 @@ h1 {
  /*صفحة المنهجيه*/
 
  .Methodology {
-    width: 100%; /* اجعل العرض كاملًا */
-    max-width: 1200px; /* حد أقصى مناسب */
-    margin: auto; /* توسيط */
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
-    flex-wrap: wrap; /* السماح بالانتقال للسطر التالي */
-    gap: 30px; /* مسافة بين البطاقات */
-    justify-content: space-around; /* توزيع متساوٍ للبقاء بجانب بعضهم */
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
     align-items: flex-start;
     padding: 20px;
     background: url();
+    
   }
   
-  .card-des{
-    width: 300px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-    position: relative;
+  
+  .card-des {
+    margin: 20px; /* إضافة مسافة بين الكروت */
+    padding: 15px; /* إضافة مسافة داخلية للكارت */
+    background-color: #f9f9f9; /* لون خلفية فاتح للكارت */
+    border-radius: 10px; /* زوايا مستديرة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للكارت */
+  }
+  
+  .card-space {
+    display: flex;
+    flex-wrap: wrap; /* السماح بانتقال الكروت إلى الصف التالي إذا لم تكن المساحة كافية */
+    justify-content: space-between; /* توزيع الكروت بالتساوي مع مسافات بينها */
+    gap: 20px; /* إضافة مسافة بين الكروت */
   }
   
   .card:hover {
@@ -339,11 +439,12 @@ h1 {
   }
   
   @media (max-width: 768px) {
-    .المنهجيه {
+.Methodology {
       flex-direction: column;
       align-items: center;
     }
   }
+  
   
 
 
@@ -370,17 +471,20 @@ h1 {
 
 /* صورة الكتاب */
 .card-image {
-  background-color: rgba(0, 0, 0, 0.1);
   width: 200px;
   height: 150px;
   border-radius: 6px;
-  flex-shrink: 0;
-  margin-right: 10px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('image\ book.webp');
-  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .card-image:hover {
@@ -589,11 +693,7 @@ input[type=submit]:hover {
 
     }
 
-    .navigation a h1 {
-        margin-left: 0;
-      
-    }
-
+   
     section {
         padding: 100px 20px;
     }
@@ -626,5 +726,4 @@ input[type=submit]:hover {
     .footer h6 {
         text-align: center;
     }
-
 

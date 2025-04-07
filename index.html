@@ -10,22 +10,25 @@
 </head>
 <body class="all">
 
-    <header>
-       <a href="" class="logo">Scoutly.Ai</a>
-       <nav name="navigation"> 
-            <h1><a href="#" onclick="showSection('home')">الرئيسية</a>
-            <a href="#" onclick="showSection('camps')">المخيمات</a>
-            <a href="#" onclick="showSection('Methodology')">المنهجية</a>
-            <a href="#" onclick="showSection('library')">المكتبة</a>
-            <a href="#" onclick="showSection('contact')">التواصل</a></h1>
-       </nav>
-    </header>
 
+    <header>
+        <a href="#" class="logo">Scoutopedia.x</a>
+        <nav class="navigation"> 
+            <ul>
+                <li><a href="#" onclick="showSection('home')">الرئيسية</a></li>
+                <li><a href="#" onclick="showSection('camps')">المخيمات</a></li>
+                <li><a href="#" onclick="showSection('Methodology')">المنهجية</a></li>
+                <li><a href="#" onclick="showSection('library')">المكتبة</a></li>
+                <li><a href="#" onclick="showSection('contact')">التواصل</a></li>
+            </ul>
+        </nav>
+    </header>
     <section id="home">
       <div name="main">
         <div>
-            <h1>Scoutly.AI</h1>
+            <h1>Scoutopedia.x</h1>
             <h2>We can help you in everything in scout</h2>
+            <h3>welcom to our website</h3>
             <a href="#services" class="main-btn">View Services</a>
         </div>
       </div>
@@ -37,37 +40,37 @@
 
 
         <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-person-hiking"></i>
-                </div>
-                <div class="info">
-                    <h3><a href="#" onclick="showSection('camps')">camps</a></h3>
-                    <p>"يمكننا مساعدتك في العثور على أرض صالحة للتخييم في كل المحافظات."</p>
-                </div>
+          <div class="card" onclick="openService('camps')">
+            <div class="icon">
+                <i class="fa-solid fa-person-hiking"></i>
             </div>
-
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-book"></i>
-                </div>
-                <div class="info">
-                    <h3> <a href="#" onclick="showSection('library')">library</a></h3>
-                    <p>يمكنك ايجاد جميع الكتب الخصة بالكشافة"</p>
-                </div>
-
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-print"></i>
-                </div>
-                <div class="info">
-                    <h3><a href="#" onclick="showSection('Methodology')">Methodology</a> </h3>
-                    <p>سوف تجد منهجية جميع الوحدات "coming soon"</p>
-                </div>
+            <div class="info">
+                <h3>Camps</h3>
+                <p>يمكننا مساعدتك في العثور على أرض صالحة للتخييم في كل المحافظات.</p>
             </div>
         </div>
+
+        <div class="card" onclick="openService('library')">
+          <div class="icon">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <div class="info">
+              <h3>library</h3>
+              <p>يمكنك ايجاد جميع الكتب الخصة بالكشافة"</p>
+            </div>
+      </div>
+            
+      <div class="card" onclick="openService('Methodology')">
+        <div class="icon">
+          <i class="fa-solid fa-print"></i>
+        </div>
+        <div class="info">
+            <h3>Methodology</h3>
+            <p>سوف تجد منهجية جميع الوحدات "coming soon"</p>
+          </div>
     </div>
+
+    
     <div class="more">
         <div>
             <h2>we are raht Possiden</h2>
@@ -75,6 +78,9 @@
             <h4>we are from x group from wadi el neil scouts</h4>
         </div>
     </div>
+    <body style="background-color: #d2dbd7; background-image: url('background.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+      <!-- Your existing content -->
+    </body>
   </section>
 
 
@@ -936,24 +942,24 @@
         <div class="card-space">
             <div class="card library">
               <div class="card-image">
-                <img src="image1.webp" alt="Scouting for Boys">
+                <img src="https://th.bing.com/th/id/R.e6b6bf740476589cfc55ffc62d7588ee?rik=RZmtpI2PlmqGYw&riu=http%3a%2f%2fprodimage.images-bn.com%2fpimages%2f9780486318127_p0_v2_s1200x630.jpg&ehk=tFEiRh8aijTqgv5LE%2bRlAI5%2bPiTkcE1ot9IORRuLrPI%3d&risl=&pid=ImgRaw&r=0" alt="Scouting for Boys">
               </div>
               <div class="card-content">
                 <div class="category">كتاب</div>
                 <div class="heading">
-                  <a href="scouting for boys.pdf.crdownload.pdf" target="_blank">Scouting for Boys</a>
+                  <a href="https://www.gutenberg.org/ebooks/65993" target="_blank">Scouting for Boys</a>
                 </div>
               </div>
             </div>
           
             <div class="card library">
               <div class="card-image">
-                <img src="cover for patrol system book.jfif.jpg" alt="Patrol System Book">
+                <img src="https://th.bing.com/th/id/OIP.I7zvzGlUwSgqgpJTVOExNAHaLH?w=2000&h=3000&rs=1&pid=ImgDetMain" alt="The Jungle Book">
               </div>
               <div class="card-content">
                 <div class="category">كتاب</div>
                 <div class="heading">
-                  <a href="patrolsystem book.pdf.crdownload.pdf" target="_blank">Patrol System Book</a>
+                  <a href="https://example.com/book2" target="_blank">The Jungle Book</a>
                 </div>
               </div>
             </div>
@@ -1089,12 +1095,10 @@
               </div>
             </div>
           </div>
-          
-          
-          
     </section>
-    <body>
+  
       
+
     
         <!-- صفحة التواصل -->
  <section id="contact" style="display: none;">
@@ -1196,12 +1200,42 @@
 </div>
 
 
+<script>
+function openService(serviceId) {
+  // إخفاء جميع الأقسام
+  document.querySelectorAll('section').forEach(section => {
+      section.style.display = 'none';
+  });
+
+  // عرض القسم المطلوب
+  document.getElementById(serviceId).style.display = 'block';
+}
+</script>
 
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        showSection('home'); // عند تحميل الصفحة، يتم عرض قسم "الرئيسية" وضبط التنسيق
+    });
 
+    function showSection(sectionId) {
+        // إخفاء جميع الأقسام
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'none';
+        });
 
+        // إظهار القسم المطلوب
+        let activeSection = document.getElementById(sectionId);
+        if (activeSection) {
+            activeSection.style.display = 'flex';
+        }
 
+        // ضبط التنسيق بعد التحديث
+        document.body.style.overflow = "auto";
+        document.body.style.display = "block";
+    }
+</script>
 
 
         <script>
