@@ -167,28 +167,6 @@ section {
     cursor: pointer;
 }
 
-.card h3, .card p {
-  text-decoration: none;
-}
-
-/* تأثير عند الضغط على الكارت */
-.card {
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05); /* تكبير الكارت عند التمرير */
-  background-color: #f0f0f0; /* تغيير لون الخلفية */
-}
-
-/* تكبير الكارت وتغيير لونه عند الضغط من الموبايل */
-@media (max-width: 768px) {
-  .card:active {
-      transform: scale(1.1); /* تكبير الكارت أكثر عند الضغط */
-      background-color: #d1e7dd; /* لون خلفية مختلف */
-  }
-}
 .card:hover
 .card:active {
     transform: scale(1.1); /* تكبير الـ Card عند الضغط */
@@ -259,52 +237,42 @@ body {
     direction: rtl; /* دعم اللغة العربية */
     text-align: center;
 }
-/* إضافة مسافة بين الكروت في قسم المخيمات */
-/* تنسيق الحاوية التي تحتوي على الكروت */
-.camps-container {
+.camps{
+  background-color: #dfded5;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url;
+}
+
+.phone-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.unavailable {
+  color: gray;
+  font-style: italic;
+}
+
+.camps {
   display: flex;
-  flex-wrap: wrap; /* السماح للكروت بالانتقال إلى الصف التالي إذا لم تكن المساحة كافية */
-  gap: 20px; /* إضافة مسافة بين الكروت */
-  justify-content: center; /* توسيط الكروت داخل الحاوية */
-  padding: 20px; /* إضافة مسافة داخلية للحاوية */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; /* Space between the cards */
+  padding: 20px; /* Optional padding around the container */
 }
 
-/* تنسيق الكروت */
-.camp-card {
-  background-color: #ffffff; /* لون خلفية الكارت */
-  border: 1px solid #ddd; /* إطار خفيف */
-  border-radius: 10px; /* زوايا مستديرة */
-  padding: 20px; /* مسافة داخلية */
-  width: calc(33.33% - 20px); /* عرض الكارت مع مراعاة المسافات */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
-  text-align: center; /* توسيط النص */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* تأثير عند التفاعل */
-}
-
-/* تأثير عند التمرير فوق الكارت */
-.camp-card:hover {
-  transform: scale(1.05); /* تكبير الكارت قليلاً */
-  background-color: #f0f0f0; /* تغيير لون الخلفية */
-}
-
-/* تنسيق النصوص داخل الكروت */
-.camp-card h3 {
-  font-size: 1.5rem; /* حجم العنوان */
-  color: #333; /* لون النص */
-  margin-bottom: 10px; /* مسافة أسفل العنوان */
-}
-
-.camp-card p {
-  font-size: 1rem; /* حجم النص */
-  color: #666; /* لون النص */
-  line-height: 1.5; /* تحسين المسافة بين الأسطر */
-}
 /* تنسيق العنوان الرئيسي */
 h1 {
     color: #333;
     margin-bottom: 20px;
 }
 
+/* تنسيق الحاوية التي تحتوي على البطاقات */
 /* تنسيق الحاوية التي تحتوي على البطاقات */
 .container {
     display: flex;
@@ -313,64 +281,76 @@ h1 {
     gap: 20px; /* المسافة بين البطاقات */
     max-width: 1200px; /* تحديد عرض الحاوية */
     margin: 0 auto; /* توسيط الحاوية */
-    align-items: center;
+    align-items: flex-start; /* محاذاة البطاقات من الأعلى */
 }
 
 /* تنسيق كل بطاقة */
 .box {
-    background-color: #8b8149;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    width: calc(50% - 40px); /* يجعل كل بطاقة تأخذ نصف العرض مع حساب المسافة */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل */
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
+    background-color: #ffffff; /* لون خلفية البطاقات */
+    border: 1px solid #ddd; /* إطار خفيف حول البطاقات */
+    border-radius: 10px; /* زوايا دائرية */
+    padding: 20px; /* مسافة داخلية */
+    width: 300px; /* عرض ثابت للبطاقات */
+    height: 250px; /* ارتفاع ثابت للبطاقات */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    text-align: center; /* محاذاة النصوص في المنتصف */
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير عند التحريك */
 }
 
 /* تأثير عند تحريك المؤشر فوق البطاقة */
 .box:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* تكبير البطاقة قليلاً */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل */
 }
 
-/* تنسيق العنوان داخل البطاقة */
+/* تنسيق النصوص داخل البطاقات */
 .text-title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #333; /* لون النص */
     margin-bottom: 10px;
 }
 
-/* تنسيق النص داخل البطاقة */
 .text-body {
-    font-size: 16px;
-    color: #666;
+    font-size: 14px;
+    color: #666; /* لون النص */
     margin-bottom: 15px;
 }
 
-/* تنسيق الرقم والموقع */
-.Number, .location {
+.Number {
     font-size: 14px;
-    color: #a79fc9;
+    color: #007bff; /* لون النص */
     margin-bottom: 10px;
 }
 
-/* تنسيق الرابط */
+.Number a {
+    text-decoration: none; /* إزالة الخط السفلي */
+    color: #007bff; /* لون الروابط */
+}
+
+.Number a:hover {
+    text-decoration: underline; /* إضافة خط سفلي عند التحريك */
+}
+
 .location a {
-    color: #0667cf;
-    text-decoration: none;
+    color: #28a745; /* لون الروابط */
+    text-decoration: none; /* إزالة الخط السفلي */
+    font-weight: bold;
 }
 
 .location a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* إضافة خط سفلي عند التحريك */
 }
 
-/* تنسيق استجابة التصميم على الشاشات الصغيرة */
+/* إضافة مسافة بين البطاقات عند عرضها فوق بعضها */
 @media (max-width: 768px) {
     .box {
-        width: 100%; /* جعل البطاقات تأخذ العرض الكامل عند تصغير الشاشة */
+        margin-bottom: 20px; /* مسافة بين البطاقات */
     }
-} 
+}
 
  /*صفحة المنهجيه*/
 
@@ -390,19 +370,19 @@ h1 {
   
   
   .card-des {
-    margin: 20px; /* إضافة مسافة بين الكروت */
-    padding: 15px; /* إضافة مسافة داخلية للكارت */
-    background-color: #f9f9f9; /* لون خلفية فاتح للكارت */
-    border-radius: 10px; /* زوايا مستديرة */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للكارت */
-  }
-  
-  .card-space {
-    display: flex;
-    flex-wrap: wrap; /* السماح بانتقال الكروت إلى الصف التالي إذا لم تكن المساحة كافية */
-    justify-content: space-between; /* توزيع الكروت بالتساوي مع مسافات بينها */
-    gap: 20px; /* إضافة مسافة بين الكروت */
-  }
+  margin: 20px; /* إضافة مسافة بين الكروت */
+  padding: 15px; /* إضافة مسافة داخلية للكارت */
+  background-color: #f9f9f9; /* لون خلفية فاتح للكارت */
+  border-radius: 10px; /* زوايا مستديرة */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للكارت */
+}
+
+.card-space {
+  display: flex;
+  flex-wrap: wrap; /* السماح بانتقال الكروت إلى الصف التالي إذا لم تكن المساحة كافية */
+  justify-content: space-between; /* توزيع الكروت بالتساوي مع مسافات بينها */
+  gap: 20px; /* إضافة مسافة بين الكروت */
+}
   
   .card:hover {
     transform: translateY(-5px);
