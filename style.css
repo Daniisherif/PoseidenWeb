@@ -1,40 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    font-family: "Roboto", sans-serif;
-    margin: 0;  
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-
-
-
-/* تنسيق الهيدر */
+/* Header styles */
 header {
-  background-color: #3F3E29;
-  width: 100%;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
+background-color: #3F3E29;
+width: 100%;
+position: fixed;
+z-index: 999;
+top: 0;
+left: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 50px;
 }
 
-/* تنسيق الشعار */
+/* Hamburger menu button */
+.nav-toggle {
+display: none;
+background: none;
+border: none;
+color: white;
+font-size: 2rem;
+cursor: pointer;
+}
+
+/* Logo */
 .logo {
-  text-decoration: none;
-  color: white;
-  font-size: 35px;
-  font-weight: bold;
-  text-align: left;
+text-decoration: none;
+color: white;
+font-size: 35px;
+font-weight: bold;
+text-align: left;
 }
 
-/* تنسيق القائمة */
+/* Navigation */
 .navigation ul {
   list-style: none;
   display: flex;
@@ -50,14 +57,26 @@ header {
 .navigation a {
   text-decoration: none;
   font-size: 18px;
-  color: white; /* لون النص أبيض */
+  color: white;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .navigation a:hover {
-  color: #d4af37; /* لون عند التحويم */
+  color: #d4af37;
 }
+
+/* Hide nav by default on mobile */
+.navigation {
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  max-height: none;
+}
+
+.navigation.nav-open {
+  max-height: 500px; /* enough to show menu */
+}
+
 
 /* تنسيق الأقسام */
 section {
@@ -647,14 +666,8 @@ input[type=submit]:hover {
     transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
     border-radius: 50%;
   }
-  
 
-
-
-
-
-
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     header {
         padding: 15px 20px;
         flex-direction: column;
@@ -663,17 +676,30 @@ input[type=submit]:hover {
     }
 
     .logo {
-        position: relative;
-        top: 0;
-        left: 0;
         font-size: 28px;
     }
 
-        
-
+    /* Show hamburger menu */
+    .nav-toggle {
+      display: block;
     }
 
-   
+    /* Hide navigation menu by default */
+    .navigation {
+      max-height: 0;
+      width: 100%;
+    }
+
+    .navigation ul {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 0;
+    }
+
+    .navigation ul li {
+      display: block;
+    }
+
     section {
         padding: 100px 20px;
     }
@@ -695,6 +721,7 @@ input[type=submit]:hover {
 
     .card {
         width: 90%;
+        max-width: 300px;
     }
 
     .box {
@@ -706,4 +733,43 @@ input[type=submit]:hover {
     .footer h6 {
         text-align: center;
     }
+}
 
+/* Additional smaller screen adjustments */
+@media (max-width: 480px) {
+  section {
+    padding: 50px 10px;
+  }
+
+  .main h1 {
+    font-size: 1.5rem;
+  }
+
+  .main h2 {
+    font-size: 0.9rem;
+  }
+
+  .main h3 {
+    font-size: 0.8rem;
+  }
+
+  .main-btn {
+    padding: 12px 18px;
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  .box {
+    height: auto;
+  }
+}
+
+/* Remove fixed background attachment on mobile for performance */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll !important;
+  }
+}
