@@ -207,7 +207,6 @@ section {
   font-size: 1.2rem; /* Adjust the font size for better readability */
   font-weight: bold; /* Make the text bold */
   color: #ffffff; /* Set a user-friendly color */
-  background-color: #cdd1d4; /* Add a background color for better visibility */
   padding: 10px 20px; /* Add padding for a clickable button-like appearance */
   border-radius: 5px; /* Round the corners for a modern look */
   text-decoration: none; /* Remove underline from links */
