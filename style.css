@@ -7,7 +7,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 /* تنسيق الهيدر */
 header {
   background-color: #3F3E29;
@@ -46,7 +45,7 @@ header {
 
 .navigation a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   color: white; /* لون النص أبيض */
   font-weight: bold;
   transition: color 0.3s ease;
@@ -255,7 +254,7 @@ body {
 }
 
 .camps {
-  display: flex;
+   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
@@ -422,7 +421,14 @@ h1 {
     }
   }
   
-  
+    .camps-container h6 {
+      font-size: 26px; /* Increase the font size to make it more prominent */
+      font-weight: bold; /* Make the text bold to emphasize it as a title */
+      text-align: center; /* Center-align the text */
+      color: #333; /* Use a comfortable and readable color */
+      margin-bottom: 20px; /* Add spacing below the title */
+  }
+
 
 
  /*صفحة المكتبة*/
@@ -675,12 +681,6 @@ input[type=submit]:hover {
         padding: 100px 20px;
     }
 
-    .main {
-        width: 340px;
-        margin: 0 auto;
-        padding: 10px 5px;
-    }
-
     .main h1 {
         font-size: 2rem;
         text-align: center;
@@ -709,4 +709,32 @@ input[type=submit]:hover {
     .footer h6 {
         text-align: center;
     }
+
+
+
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+      resize: vertical; /* السماح بتغيير حجم الحقل عموديًا فقط */
+    }
+    
+    input[type="button"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    input[type="button"]:hover {
+      background-color: #45a049;
+    }
+    
+
 
