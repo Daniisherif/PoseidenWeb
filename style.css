@@ -706,38 +706,3 @@ input[type=submit]:hover {
     .footer h6 {
         text-align: center;
     }
-
-@media (max-width: 360px) {
-  section {
-      padding: 15px 5px;
-  }
-
-  .main h1 {
-      font-size: 1.4rem;
-  }
-
-  .main h2 {
-      font-size: 1rem;
-  }
-  .card, .box {
-    width: 100%;
-    padding: 5px;
-    margin: 5px auto;
-    display: block;
-}
-
-  .card-image {
-      width: 100%;
-      height: auto;
-  }
-
-  .content {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-  }
-
-  .services {
-      padding: 15px;
-  }
-}
