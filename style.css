@@ -739,45 +739,43 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 360px) {
-    section {
-        padding: 20px 5px;
-    }
+  section {
+      padding: 15px 5px;
+  }
 
-    .main h1 {
-        font-size: 1.2rem;
-    }
+  .main h1 {
+      font-size: 1.4rem;
+  }
 
-    .main h2 {
-        font-size: 0.8rem;
-    }
+  .main h2 {
+      font-size: 1rem;
+  }
 
-    .main h3 {
-        font-size: 0.7rem;
-    }
+  .card {
+      width: 90vw;
+      padding: 8px;
+      margin: 5px auto;
+      display: flex;
+      flex-direction: column;
+  }
 
-    .card {
-        width: 100%;
-        padding: 10px;
-        margin: 8px 0;
-    }
+  .box {
+      width: 100%;
+      padding: 8px;
+  }
 
-    .box {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+  .card-image {
+      width: 100%;
+      height: auto;
+  }
 
-    .card-image {
-        width: 150px;
-        height: 100px;
-    }
+  .content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+  }
 
-    .content {
-        gap: 10px;
-    }
-
-    .services {
-        padding: 20px 10px;
-    }
+  .services {
+      padding: 15px;
+  }
 }
