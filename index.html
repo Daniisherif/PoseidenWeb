@@ -1149,8 +1149,8 @@
 
         </select>
         <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px" required></textarea>
+        <input type="button" value="Submit" onclick="submitContactForm()">
       </form>
     </div>
   </div>
@@ -1259,14 +1259,14 @@
                 document.querySelectorAll('section').forEach(section => {
                     section.style.display = 'none';
                 });
-                document.getElementById(sectionId).style.display = 'block';
-            }
-        </script>
+              document.getElementById(sectionId).style.display = 'block';
+          }
+      </script>
       
         <footer class="footer">
-            <p>Scouts and Guides Wadi El Nile</p>
-            <h5>10th Group</h5>
-            <h6>Poseidon</h6>
-        </footer>
+          <p>Scouts and Guides Wadi El Nile</p>
+          <h5>10th Group</h5>
+          <h6>Poseidon</h6>
+      </footer>
   </body>
-  </html>
+</html>
