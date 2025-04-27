@@ -8,9 +8,6 @@
     scroll-behavior: smooth;
 }
 
-
-
-
 /* تنسيق الهيدر */
 header {
   background-color: #3F3E29;
@@ -678,6 +675,12 @@ input[type=submit]:hover {
         padding: 100px 20px;
     }
 
+    .main {
+        width: 340px;
+        margin: 0 auto;
+        padding: 10px 5px;
+    }
+
     .main h1 {
         font-size: 2rem;
         text-align: center;
@@ -706,3 +709,4 @@ input[type=submit]:hover {
     .footer h6 {
         text-align: center;
     }
+
