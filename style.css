@@ -215,7 +215,6 @@ section {
 }
 
 .more:hover {
-  background-color: #0056b3; /* Darken the background on hover */
   color: #e0e0e0; /* Slightly change the text color on hover */
   cursor: pointer; /* Change the cursor to indicate interactivity */
 }
@@ -629,8 +628,8 @@ input[type=submit]:hover {
   .child:hover {
     background-color: white;
     background-position: -100px 100px, -100px 100px;
-    transform: rotate3d(0.5, 1, 0, 30deg);
-    transform: perspective(180px) rotateX(60deg) translateY(2px);
+    /*transform: rotate3d(0.5, 1, 0, 30deg);*/
+    /*transform: perspective(180px) rotateX(60deg) translateY(2px);*/
     box-shadow: 0px 10px 10px rgb(1, 49, 182);
   }
   
@@ -646,8 +645,9 @@ input[type=submit]:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
+    /*transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);*/
     border-radius: 50%;
+    cursor: pointer;
   }
   
 
