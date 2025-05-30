@@ -31,4 +31,26 @@ const submitContactForm = () => {
             console.error("FAILED...", error);
             alert("حدث خطأ أثناء إرسال الرسالة. حاول مرة أخرى.");
         });
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('campSearch');
+            const boxes = document.querySelectorAll('.box');
+          
+            searchInput.addEventListener('input', function() {
+              const searchTerm = this.value.toLowerCase().trim();
+          
+              boxes.forEach(box => {
+                const title = box.querySelector('.text-title').textContent.toLowerCase();
+                const description = box.querySelector('.text-body').textContent.toLowerCase();
+                const location = box.querySelector('.location').textContent.toLowerCase();
+          
+                if (title.includes(searchTerm) || 
+                    description.includes(searchTerm) || 
+                    location.includes(searchTerm)) {
+                  box.classList.remove('hidden');
+                } else {
+                  box.classList.add('hidden');
+                }
+              });
+            });
+          });
 };

@@ -731,6 +731,43 @@ input[type=submit]:hover {
     input[type="button"]:hover {
       background-color: #45a049;
     }
-    
+    .search-container {
+      max-width: 600px;
+      margin: 20px auto;
+      display: flex;
+      gap: 10px;
+      padding: 0 20px;
+    }
 
+    .search-input {
+      flex: 1;
+      padding: 12px 20px;
+      border: 2px solid #ddd;
+      border-radius: 25px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
 
+    .search-input:focus {
+      border-color: #4CAF50;
+    }
+
+    .search-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-button:hover {
+      background-color: #45a049;
+    }
+
+    /* Add styles for filtered boxes */
+    .box.hidden {
+      display: none;
+    }
