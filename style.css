@@ -830,7 +830,7 @@ input[type=submit]:hover {
     font-size: 6px;
 }
 
-/* Camps Search Bar Styling */
+/* Camps Search Bar Styling (Single Source of Truth) */
 .search-box {
     display: flex;
     align-items: center;
@@ -838,12 +838,13 @@ input[type=submit]:hover {
     background: #fff;
     border-radius: 30px;
     box-shadow: 0 4px 16px rgba(128, 204, 176, 0.15), 0 1.5px 6px rgba(0,0,0,0.08);
-    padding: 8px 18px;
+    padding: 8px 12px;
     margin: 30px auto 35px auto;
     max-width: 420px;
-    width: 95%;
+    width: 100%;
     transition: box-shadow 0.3s;
-    gap: 10px;
+    gap: 8px;
+    border: 1.5px solid #e0e0e0;
 }
 
 .search-box:focus-within {
@@ -861,6 +862,7 @@ input[type=submit]:hover {
     padding: 10px 0 10px 10px;
     border-radius: 20px;
     transition: background 0.2s;
+    min-width: 0;
 }
 
 #searchInput::placeholder {
@@ -876,14 +878,17 @@ input[type=submit]:hover {
     border-radius: 50%;
     width: 44px;
     height: 44px;
+    min-width: 44px;
+    min-height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 0;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(128, 204, 176, 0.10);
     transition: background 0.2s, transform 0.2s;
-    margin-left: 5px;
+    margin-left: 0;
+    padding: 0;
 }
 
 .search-btn:hover, .search-btn:focus {
@@ -892,44 +897,31 @@ input[type=submit]:hover {
 }
 
 .search-btn i {
-    font-size: 1.3em;
-    margin-left: 2px;
+    font-size: 1.4rem;
+    margin: 0;
     pointer-events: none;
-}
-
-/* Hide the default button text for better icon-only look */
-.search-btn {
-    font-size: 0;
-}
-.search-btn i {
-    font-size: 1.3rem;
 }
 
 /* Responsive for mobile */
 @media (max-width: 600px) {
     .search-box {
-        max-width: 98%;
-        padding: 6px 8px;
-        gap: 6px;
+        max-width: 100%;
+        width: 100%;
+        padding: 4px 4px;
+        margin: 18px auto 18px auto;
+        gap: 4px;
     }
     #searchInput {
         font-size: 1rem;
         padding: 8px 0 8px 8px;
     }
     .search-btn {
-        width: 44px;
-        height: 44px;
-        min-width: 44px;
-        min-height: 44px;
-        font-size: 0;
-        /* Ensure the icon is centered and large enough */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
     }
     .search-btn i {
-        font-size: 1.4rem;
-        margin-left: 0;
+        font-size: 1.2rem;
     }
 }
