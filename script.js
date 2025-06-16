@@ -31,26 +31,36 @@ const submitContactForm = () => {
             console.error("FAILED...", error);
             alert("حدث خطأ أثناء إرسال الرسالة. حاول مرة أخرى.");
         });
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('campSearch');
-            const boxes = document.querySelectorAll('.box');
-          
-            searchInput.addEventListener('input', function() {
-              const searchTerm = this.value.toLowerCase().trim();
-          
-              boxes.forEach(box => {
-                const title = box.querySelector('.text-title').textContent.toLowerCase();
-                const description = box.querySelector('.text-body').textContent.toLowerCase();
-                const location = box.querySelector('.location').textContent.toLowerCase();
-          
-                if (title.includes(searchTerm) || 
-                    description.includes(searchTerm) || 
-                    location.includes(searchTerm)) {
-                  box.classList.remove('hidden');
-                } else {
-                  box.classList.add('hidden');
-                }
-              });
-            });
-          });
 };
+
+// --- Camps Search/Filter Logic ---
+
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Camps search bar
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', filterCamps);
+    }
+});
+
+// Filter camps based on search input
+function filterCamps() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.querySelectorAll('#camps .box');
+    cards.forEach(card => {
+        let title = card.querySelector('.text-title')?.textContent.toLowerCase() || '';
+        let body = card.querySelector('.text-body')?.textContent.toLowerCase() || '';
+        let number = card.querySelector('.Number')?.textContent.toLowerCase() || '';
+        let location = card.querySelector('.location')?.textContent.toLowerCase() || '';
+        let fullText = title + ' ' + body + ' ' + number + ' ' + location;
+        // Use display block/none for camps section
+        card.style.display = fullText.includes(input) ? 'block' : 'none';
+    });
+}
+
+// Expose performSearch for HTML button
+function performSearch() {
+    filterCamps();
+}
+window.performSearch = performSearch;

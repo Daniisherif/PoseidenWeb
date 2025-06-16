@@ -125,15 +125,13 @@
       <section id="camps" style="display: none;">
         <h1>المخيمات <i class="fa-solid fa-person-hiking"></i></h1>
         
-        <!-- Add search bar -->
-        <div class="search-container">
-          <input type="text" id="campSearch" placeholder="ابحث عن مخيم..." class="search-input">
-          <button class="search-button">
-            <i class="fa-solid fa-search"></i>
+        <!-- Search Bar -->
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="ابحث عن المخيمات هنا..." oninput="filterCamps()">
+          <button class="search-btn" onclick="performSearch()">
+            <i class="fas fa-search"></i>
           </button>
-        </div>
-
-        <div class="container">
+      </div>
 
             <!-- بطاقة 1 -->
         <div class="box">
