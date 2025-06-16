@@ -910,13 +910,26 @@ input[type=submit]:hover {
     .search-box {
         max-width: 98%;
         padding: 6px 8px;
+        gap: 6px;
     }
     #searchInput {
         font-size: 1rem;
         padding: 8px 0 8px 8px;
     }
     .search-btn {
-        width: 38px;
-        height: 38px;
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+        font-size: 0;
+        /* Ensure the icon is centered and large enough */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .search-btn i {
+        font-size: 1.4rem;
+        margin-left: 0;
     }
 }
