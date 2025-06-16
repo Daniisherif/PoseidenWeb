@@ -910,7 +910,6 @@ input[type=submit]:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: none; /* Remove background image/color */
     overflow: hidden;
 }
 
@@ -965,8 +964,6 @@ input[type=submit]:hover {
     border: none;
     border-radius: 30px;
     font-weight: bold;
-    box-shadow: 0 2px 12px rgba(128,204,176,0.15);
-    transition: background 0.3s, transform 0.2s;
     margin-bottom: 40px;
     text-decoration: none;
 }
