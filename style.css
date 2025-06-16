@@ -902,67 +902,26 @@ input[type=submit]:hover {
     pointer-events: none;
 }
 
-/* Hero Section Styles */
-.hero-section {
-    position: relative;
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    /* Ensure the section takes full viewport and centers content */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: #fff;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 60px 20px 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    min-height: 100vh; /* Ensure vertical centering on mobile */
-    box-sizing: border-box;
-}
-
-/* Responsive hero section */
-@media (max-width: 700px) {
-    .hero-section {
-        min-height: 70vh;
-        background-attachment: scroll;
+/* Responsive for mobile */
+@media (max-width: 600px) {
+    .search-box {
+        max-width: 100%;
+        width: 100%;
+        padding: 4px 4px;
+        margin: 18px auto 18px auto;
+        gap: 4px;
     }
-    .hero-content {
-        padding: 40px 8px 30px 8px;
-        min-height: 70vh;
-        justify-content: center;
-        align-items: center;
-        display: flex;
+    #searchInput {
+        font-size: 1rem;
+        padding: 8px 0 8px 8px;
     }
-    .hero-title { font-size: 2.1rem; }
-    .hero-subtitle { font-size: 1.1rem; }
-    .hero-desc { font-size: 1rem; }
-    .hero-btn { font-size: 1rem; padding: 12px 24px; }
-    .scroll-down { width: 24px; height: 38px; }
-}
-
-@media (max-width: 480px) {
-    .hero-section {
-        min-height: 60vh;
+    .search-btn {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
     }
-    .hero-content {
-        padding: 28px 2vw 18px 2vw;
-        min-height: 60vh;
-        justify-content: center;
-        align-items: center;
-        display: flex;
+    .search-btn i {
+        font-size: 1.2rem;
     }
-    .hero-title { font-size: 1.3rem; }
-    .hero-btn { padding: 10px 16px; }
 }
